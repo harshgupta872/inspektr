@@ -9,7 +9,7 @@ Both the auditing and the statistics features can be used independently.  Howeve
 *Configuring the Validation Bean Post Processor*
 Inspektr utilizes annotations to handle its Inversion of Control dependency validation (i.e. whether you supplied the correct dependencies).  These annotations are checked using a BeanPostProcessor configured in your application's Spring configuration file.  You can add an entry like this:
 
-<bean id="validationAnnotationBeanPostProcessor" class="org.inspektr.common.ioc.validation.ValidationAnnotationBeanPostProcessor" />
+<bean id="validationAnnotationBeanPostProcessor" class="org.inspektr.common.ioc.validation.!ValidationAnnotationBeanPostProcessor" />
 
 
 Add your content here.  Format your content with:
