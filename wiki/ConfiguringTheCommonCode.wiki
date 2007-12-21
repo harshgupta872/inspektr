@@ -11,7 +11,7 @@ Inspektr utilizes annotations to handle its Inversion of Control dependency vali
 <bean id="validationAnnotationBeanPostProcessor" class="org.inspektr.common.ioc.validation.!ValidationAnnotationBeanPostProcessor" />
 
 =Configuring the !ClientInfo Filter=
-Both the auditing and the statistics component require specific information about the client (their IP Address, the IPAddress of the server they are using, etc.).  This information is obtained using a filter and ThreadLocal combination.  Therefore, the following needs to be placed in the web.xml:
+Both the auditing and the statistics component require specific information about the client (their IP Address, the IPAddress of the server they are using, etc.).  This information is obtained using a filter and !ThreadLocal combination.  Therefore, the following needs to be placed in the web.xml:
 
 Where you've defined the filters:
 <filter>
