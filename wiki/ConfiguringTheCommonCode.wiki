@@ -1,0 +1,18 @@
+#Configuring the code used by both the auditing and the statistics features.#
+
+= Introduction =
+
+Both the auditing and the statistics features can be used independently.  However, regardless of which one you use, there is some common configuration between the two.
+
+
+= Details =
+*Configuring the Validation Bean Post Processor*
+Inspektr utilizes annotations to handle its Inversion of Control dependency validation (i.e. whether you supplied the correct dependencies).  These annotations are checked using a BeanPostProcessor configured in your application's Spring configuration file.  You can add an entry like this:
+
+<bean id="validationAnnotationBeanPostProcessor" class="org.inspektr.common.ioc.validation.ValidationAnnotationBeanPostProcessor" />
+
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
