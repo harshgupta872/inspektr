@@ -1,4 +1,4 @@
-#The database tables required to use certain functionality
+#summary The database tables required to use certain functionality
 = Introduction =
 While Inspektr provides simple example managers that will either write to the standard output or a log file, any serious enterprise logging and statistics gathering will need to be stored in a database.
 
