@@ -1,13 +1,38 @@
 #summary How to enable statistics and auditing for your application.
 
 = Introduction =
-
-Add your content here.
-
+Statistics and Auditing requires functionality present in the Spring 2.5 libraries, thus the configuration information detailed below would go into your Spring configuration file.
 
 = Details =
+To enable Statistics:
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+{{{
+   <bean id="statisticManagementAspect" class="org.inspektr.statistics.StatisticManagementAspect">
+      <constructor-arg index="0">
+         <list>
+              ... (list of StatisticManagers)
+         </list>
+      </constructor-arg>
+      <constructor-arg index="1" value="APP_ID" />
+   </bean>
+}}}
+
+The list of StatisticManagers 
+
+To enable Auditing:
+
+{{{
+   <bean id="auditTrailManagementAspect" class="org.inspektr.audit.AuditTrailManagementAspect">
+      <constructor-arg index="0" ref="auditablePrincipalResolver" />
+      <constructor-arg index="1">
+         <list>
+         ... (list of AuditableResourceResolvers)
+         </list>
+      </constructor-arg>
+      <constructor-arg index="2">
+         <list>
+         ... (list of auditTrailManagers)
+      </constructor-arg>
+      <constructor-arg index="3" value="APP_ID" />
+   </bean>
+}}}
