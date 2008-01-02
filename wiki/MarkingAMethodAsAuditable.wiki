@@ -1,3 +1,5 @@
+#Methods in your application can be marked as Auditable
+
 = Introduction =
 Methods in your application can be marked as Auditable, by using the Auditable annotation, detailed below.
 
