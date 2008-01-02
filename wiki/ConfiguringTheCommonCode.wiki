@@ -8,7 +8,9 @@ Both the auditing and the statistics features can be used independently.  Howeve
 =Configuring the Validation Bean Post Processor=
 Inspektr utilizes annotations to handle its Inversion of Control dependency validation (i.e. whether you supplied the correct dependencies).  These annotations are checked using a !BeanPostProcessor configured in your application's Spring configuration file.  You can add an entry like this:
 
-<bean id="validationAnnotationBeanPostProcessor" class="org.inspektr.common.ioc.validation.!ValidationAnnotationBeanPostProcessor" />
+{{{
+<bean id="validationAnnotationBeanPostProcessor" class="org.inspektr.common.ioc.validation.ValidationAnnotationBeanPostProcessor" />
+}}}
 
 =Configuring the !ClientInfo Filter=
 Both the auditing and the statistics component require specific information about the client (their IP Address, the IPAddress of the server they are using, etc.).  This information is obtained using a filter and !ThreadLocal combination.  Therefore, the following needs to be placed in the web.xml:
