@@ -17,8 +17,6 @@ To enable Statistics:
    </bean>
 }}}
 
-The list of StatisticManagers 
-
 To enable Auditing:
 
 {{{
