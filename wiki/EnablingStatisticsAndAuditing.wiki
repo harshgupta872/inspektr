@@ -6,6 +6,17 @@ Statistics and Auditing requires functionality present in the Spring 2.5 librari
 = Details =
 To enable Statistics:
 
+At its core, Inspektr uses Spring's @AspectJ aspects, so in order to enable both statistics and/or audit trail facilities, define the following element in your Spring configuration file (you would need to include the Spring Aop XML schema declaration: [http://static.springframework.org/spring/docs/2.5.x/reference/xsd-config.html#xsd-config-body-schemas-aop]) : 
+
+{{{ 
+   <aop:aspectj-autoproxy/> 
+}}}
+
+
+Then,
+
+to enable statistics gathering, define the following bean:
+
 {{{
    <bean id="statisticManagementAspect" class="org.inspektr.statistics.StatisticManagementAspect">
       <constructor-arg index="0">
@@ -17,7 +28,7 @@ To enable Statistics:
    </bean>
 }}}
 
-To enable Auditing:
+to enable auditing, define the following bean:
 
 {{{
    <bean id="auditTrailManagementAspect" class="org.inspektr.audit.AuditTrailManagementAspect">
